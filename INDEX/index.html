@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../LIBRERIA/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../CSS/main.css">    
+    <link rel="shortcut icon" href="../IMG/Icon.jpg">
+    
+    <title>Buscador de imagenes </title>
+
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <!--Agregamos un header donde estarán nuestra cabecera -->
+    
+        <header>
+            <div class="logo">
+                <h1>Buscador de Imágenes</h1>
+            </div>
+    
+            <!--creamos una barra de busqueda en nuestro sitio-->
+            <form action="">
+                <input type="text" class="barra-busqueda" id="barra-busqueda" placeholder="Buscar">
+            </form>
+    
+            <!--INGRESAMOS LAS CATEGORIAS DE NUESTRA PAGINA WEB -->
+            <div class="categorias" id="categorias">
+                <a href="#" class="activo">Todos</a>
+                <!--aqui iran todas las imagenes-->
+                <a href="#">Naturaleza</a>
+                <a href="#">Ciudades</a>
+                <a href="#">Personas</a>
+                <a href="#">Animales</a>
+            </div>
+        </header>
+    
+        <!-----------CREAMOS UNA SECCIOM------------------>
+        <section class="grid" id="grid">
+            <div class="item" data-categoria="ciudades" data-etiquetas="ciudades autos carros calles "
+                data-descripcion="2.- Lorem ipsum dolor sit amet consectetur">
+                <div class="item-contenido">
+                    <img src="../IMG/ciudad1.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="personas" data-etiquetas="personas mujeres"
+                data-descripcion="2.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/persona1.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="paisajes" data-etiquetas="paisajes montañas mar playas"
+                data-descripcion="3.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/paisaje1.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="animales" data-etiquetas="animales leones"
+                data-descripcion="4.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/animal1.png" alt="">
+                </div>
+            </div>
+        
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="animales" data-etiquetas="animales pandas"
+                data-descripcion="5.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/animal2.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="personas" data-etiquetas="personas mujeres"
+                data-descripcion="6.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/persona2.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="paisajes" data-etiquetas="paisajes montañas niebla"
+                data-descripcion="7.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/paisaje2.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="ciudades" data-etiquetas="ciudades paisajes carreteras"
+                data-descripcion="8.- Lorem ipsum dolor sit amet consectetur.">
+                <div class="item-contenido">
+                    <img src="../IMG/ciudad2.png" alt="">
+                </div>
+            </div>
+            <!------------------------------------------------------------------>
+            <div class="item" data-categoria="naturaleza" data-etiquetas="naturaleza hojas plantas" data-descripcion="9.- Lorem ipsum dolor sit amet consectetur.
+                            ">
+                <div class="item-contenido">
+                    <img src="../IMG/naturaleza1.png" alt="">
+                </div>
+            </div>
+        
+        </section>
+
+        <!-- Agregamos una seccion de overlay donde le agregamos 
+              un icono de cerrar a las imagenes cuando se les da click
+        -->
+        <section class="overlay" id="overlay">
+            <div class=" contenedor-img">
+                <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+                <img src="../IMG/ciudad1.png" alt="">
+            </div>
+            <p class="descripcion">Ejemplo 1</p>
+        </section>
+    
+        <!-------------------CREAMOS UN PIE DE PAGINA --------------->
+        <footer class="contenedor">
+           
+            <div class="redes-sociales">
+
+                <div class="contenedor-icono">
+                    <a href="https://www.youtube.com/channel/UCr9445133eLcvzK9GVmJeUA" target="_blank" class="youtube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+                <div class="contenedor-icono">
+                    <a href="https://www.facebook.com/pages/?category=your_pages&ref=bookmarks" target="_blank" class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+                <div class="contenedor-icono">
+                    <a href="https://www.instagram.com/daniel.garrido_/reels/?hl=es-la" target="_blank" class="instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+
+            </div>
+    
+            <!--AGREGAMOS UN PIE DE PAGINA SOBRE LA PERSONA QUE CREO LA PAGINA -->
+            <div class="autor">
+                <p>Sitio web diseñado por : &copy; Daniel Garrido</p>
+            </div>
+    
+        </footer>
+    
+    </div>
+
+    <!-----------------UTILIZAMOS LA LIBRERIA MURI--------------->
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+	<script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+	
+    <script src="../JS/js.js"></script>
+</body>
+</html>
