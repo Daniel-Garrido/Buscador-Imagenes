@@ -1,16 +1,22 @@
 /*SELECTOR UNIVERSAL */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /*LE AGREGAMOS CSS AL CUERPO  DE MI PAGINA*/
-body{
-    background: #283048;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #859398, #283048);  /* Chrome 10-25, Safari 5.1-6 */
+body {
+    background: #005AA7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFDE4, #005AA7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-family: sans-serif;
 }
+
 /*LE AGREGAMOS CSS */
 a {
     text-decoration: none;
@@ -24,119 +30,124 @@ a {
 }
 
 /*Le agregamos css AL header*/
- header{
-     padding: 40px 0;
- }
+header {
+    padding: 40px 0;
+}
 
- /*LE AGREGAMOS CSS AL LOGO */
- header .logo {
-     text-align: center;/*alineacion de texto */
-     margin-bottom: 40px;
- }
+/*LE AGREGAMOS CSS AL LOGO */
+header .logo {
+    text-align: center;
+    /*alineacion de texto */
+    margin-bottom: 40px;
+}
 
 /*LE AGREGAMOS CSS AL TITULO DE NUESTRA PAGINA WEB */
- header .logo h1 {
-    color: #fff ;
+header .logo h1 {
+    color: #fff;
     font-size: 40px;
 }
- /*LE AGREGAMOS CSS A LA ETIQUETA P */
- header .logo p {
-     color:/*#EDEDED*/ b ;
- }
+
+/*LE AGREGAMOS CSS A LA ETIQUETA P */
+header .logo p {
+    color:
+        /*#EDEDED*/
+        b;
+}
 
 
- header form {
+header form {
     width: 100%;
-   
+
     /*trabajamos con flexbox*/
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 
- }
- 
- /*le agregamos css a la barra de busqueda */
- header .barra-busqueda {
-     width: 70%;
-     height: 40px;
-     line-height: 40px;
-     background:  #fff;
-     padding: 0 20px;
-     border-radius: 100px;
-     border: none;
-     text-align: center;
-     font-size: 20px;
- }   
+}
 
- /*le agregamos css a la barra de categoria*/
- header .categorias {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
- }
+/*le agregamos css a la barra de busqueda */
+header .barra-busqueda {
+    width: 70%;
+    height: 40px;
+    line-height: 40px;
+    background: #fff;
+    padding: 0 20px;
+    border-radius: 100px;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+}
 
-
- header .categorias a {
-     color: #fff;
-     margin:  10px 20px ;
-     font-size: 18px;
-     font-weight: 700;
- }
+/*le agregamos css a la barra de categoria*/
+header .categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
- header .categorias a.activo {
-     color: #000; /*color del texto de la barra de categorias */
- }
+header .categorias a {
+    color: #fff;
+    margin: 10px 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
 
 
- /*LE AGREGAMSO ESTILOS A LAS IMAGENES */
- .grid {
-	position: relative;
-	width: 100%;
-	opacity: 0;
-	transition: opacity 0.5s linear 1s;
+header .categorias a.activo {
+    color: #000;
+    /*color del texto de la barra de categorias */
+}
+
+
+/*LE AGREGAMSO ESTILOS A LAS IMAGENES */
+.grid {
+    position: relative;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s linear 1s;
 }
 
 .grid.imagenes-cargadas {
-	opacity: 1;
+    opacity: 1;
 }
 
 /*LE AGREGAMOS CSS A LOS IMTE */
- .grid .item {
-	position: absolute;
-	display: block;
-	padding: 0;
-	margin: 10px;
+.grid .item {
+    position: absolute;
+    display: block;
+    padding: 0;
+    margin: 10px;
     width: calc(33.333333% - 20px);
 
 }
 
 .grid .item-contenido {
-	position: relative;
+    position: relative;
 }
 
 /*cuando se pase el cursor 
 a una imagene se cambia a una manita para poder dar click */
 .grid .item img {
-	width: 100%;
-	cursor: pointer;
-	vertical-align: top;
+    width: 100%;
+    cursor: pointer;
+    vertical-align: top;
 }
 
 /*LE AGREGAMOS CSS AL OVERLAY */
 .overlay {
     position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(0,0,0,.9);
-	width: 100%;
-	height: 100vh;
-	display: none;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .overlay.activo {
@@ -144,7 +155,7 @@ a una imagene se cambia a una manita para poder dar click */
 }
 
 .overlay img {
- max-width: 100%;
+    max-width: 100%;
 }
 
 /*le agregamos css a las descripciones de las imagenes 
@@ -152,11 +163,14 @@ cuando le demos click a la imagen*/
 .overlay .descripcion {
     display: block;
     background: #fff;
-    padding: 20px;/*relleno */
-    text-align: center;/*alineacion del texto */
+    padding: 20px;
+    /*relleno */
+    text-align: center;
+    /*alineacion del texto */
     margin-top: 5px;
     border-radius: 15px;
-    max-width: 100%;/*ancho maximo */
+    max-width: 100%;
+    /*ancho maximo */
 
 }
 
@@ -167,14 +181,16 @@ cuando le demos click a la imagen*/
 
 
 /*LE AGREGAMOS CSS AL OVERLAY  DEL ICONO DE CERRAR */
-.overlay #btn-cerrar-popup{
+.overlay #btn-cerrar-popup {
     background: none;
     font-size: 20px;
     color: #fff;
-    border: none;/*ningun border*/
+    border: none;
+    /*ningun border*/
     cursor: pointer;
     position: absolute;
-    right: -20px;/*derecha*/
+    right: -20px;
+    /*derecha*/
     top: -20px;
 
 }
@@ -186,12 +202,13 @@ footer .redes-sociales {
     align-content: center;
     justify-content: center;
     padding: 20px;
-    flex-wrap: wrap;/*envoltura*/
+    flex-wrap: wrap;
+    /*envoltura*/
 }
 
 
 /* LE DAMOS ANIMACION AL CSS DE LOS ICONOS DE REDES SOCIALES */
-footer .redes-sociales a{
+footer .redes-sociales a {
     display: block;
     width: 60px;
     height: 60px;
@@ -204,7 +221,7 @@ footer .redes-sociales a{
 }
 
 /*le agregamos diseño a los iconos de las redes sociales */
-footer .redes-sociales .youtube{
+footer .redes-sociales .youtube {
     background: #E61E39;
 }
 
@@ -216,9 +233,9 @@ footer .redes-sociales .instagram {
     background: #c13584;
 }
 
-footer .redes-sociales a i  {
+footer .redes-sociales a i {
     font-size: 25px;
-    line-height:60px;
+    line-height: 60px;
 
 }
 
@@ -233,11 +250,11 @@ footer .autor {
 /*le agregamso responsive design*/
 /*trabajando con media query */
 @media screen and (max-width: 700px) {
-	.grid .item {
-		width: calc(50% - 20px);
-	}
+    .grid .item {
+        width: calc(50% - 20px);
+    }
 
-	header .barra-busqueda {
-		width: 100%;
-	}
+    header .barra-busqueda {
+        width: 100%;
+    }
 }
